@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Seq_Gen</title>
+</head>
+<body>
+    <div id="seqGen">
+    </div>
+    <script>
+        var i;
+        function seq1()
+        {
+            var start=18;
+            for(i=1; i<6; i++)
+            {
+                seq=start*start;
+                document.getElementById("seqGen").innerHTML+=seq +", ";
+                start+=1;
+            }
+        }
+        seq1();
+        function seq2()
+        {
+            document.getElementById("seqGen").innerHTML+="<br>";
+            var start=8;
+            for(i=1; i<6; i++)
+            {
+                seq=start*start*start;
+                document.getElementById("seqGen").innerHTML+=seq +", ";
+                start+=1;
+            }
+        }
+        seq2();
+        function seq3()
+        {
+            document.getElementById("seqGen").innerHTML+="<br>";
+            var start=4;
+            document.getElementById("seqGen").innerHTML+=start+", ";
+            for(i=1; i<6; i++)
+            {
+                seq=start*9;
+                document.getElementById("seqGen").innerHTML+=seq +", ";
+                start=seq;            }
+        }
+        seq3();
+        function seq4()
+        {
+            document.getElementById("seqGen").innerHTML+="<br>";
+            var start=4;
+            document.getElementById("seqGen").innerHTML+=start+", ";
+            for(i=0; i<6; i++)
+            {
+                seq=start+5;
+                document.getElementById("seqGen").innerHTML+=seq+", ";
+                start=seq;
+            }
+        }
+        seq4();
+        function seq5()
+        {
+            document.getElementById("seqGen").innerHTML+="<br>";
+            var start1=0;
+            var start2=2;
+            var start3=6;
+            document.getElementById("seqGen").innerHTML+=start1+ ", " + start2+ ", " + start3 + ", ";
+            for(i=0; i<6; i++)
+            {
+                seq = start1 + start2 + start3;
+                document.getElementById("seqGen").innerHTML+=seq+", ";
+                start1=start2;
+                start2=start3;
+                start3=seq;
+            }
+        }
+        seq5();
+        function seq6()
+        {
+            document.getElementById("seqGen").innerHTML+="<br>";
+            var start;
+            for(i=1; i<=6; i++)
+            {
+                seq=Math.pow(i, 3)+i;
+                document.getElementById("seqGen").innerHTML+=seq+ ", ";
+            }
+        }
+        seq6();
+        function seq7()
+        {
+            document.getElementById("seqGen").innerHTML+="<br>";
+            var start=6;
+            document.getElementById("seqGen").innerHTML+=start + ", ";
+            for(i=1; i<=6; i++)
+            {
+                seq=start+(5*i);
+                document.getElementById("seqGen").innerHTML+=seq + ", ";
+                start=seq;
+            }
+        }
+        seq7();
+    </script>
+</body>
+</html>
